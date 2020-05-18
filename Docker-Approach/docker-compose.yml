@@ -1,0 +1,38 @@
+version: '3'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    volumes:
+      - './Server/nginx.conf:/etc/nginx/nginx.conf'
+    ports:
+      - "8000:80"
+
+  proxy1:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    volumes:
+      - './Proxy/nginx.conf:/etc/nginx/nginx.conf'
+
+  proxy2:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    volumes:
+      - './Proxy/nginx.conf:/etc/nginx/nginx.conf'
+
+  proxy3:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    volumes:
+      - './Proxy/nginx.conf:/etc/nginx/nginx.conf'
+
+  proxy4:
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    volumes:
+      - './Proxy/nginx.conf:/etc/nginx/nginx.conf'
