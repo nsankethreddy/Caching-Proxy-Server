@@ -14,3 +14,20 @@ Network Structure
 
 Execution Details
 ==================
+We have implimented in the caching server in 2 different approaches.
+
+- Vanilla Nginx 
+- Docker Approach
+
+## Vanilla Nginx
+
+In this method we bring up the caching proxy server in our own system.  
+
+- Install Nginx in the server/Computer
+- Copy the nginx.conf to the nginx folder on the system (Default Nginx location : /etc/nginx )
+- Create a new caching directory called "cache" in the nginx folder (Default location : /etc/nginx/cache )
+- Start the nginx server
+- Connect to the hosted/loadbalanced/caching proxy server through a browser with a IP : 127.0.0.1:80
+
+
+## Docker Approch
